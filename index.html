@@ -1855,7 +1855,7 @@ table.brief tr.total:hover td { background: var(--paper-warm); }
 
   <div class="section-head">
     <h2 id="ov-title">Headline position</h2>
-    <span class="desc">Apr 2026 actuals<br>FY27 · Month 1</span>
+    <span class="desc">Apr 2026 actuals<br>FY2026-27 · Month 1</span>
   </div>
   <div class="kpi-row cols-4">
     <div class="kpi feature">
@@ -1933,7 +1933,7 @@ table.brief tr.total:hover td { background: var(--paper-warm); }
 <!-- ===== VERTICALS TAB ===== -->
 <div id="tab-verticals" class="tab-content">
   <div class="section-head">
-    <h2>Six-vertical attainment vs FY27 target</h2>
+    <h2>Six-vertical attainment vs FY2026-27 target</h2>
     <span class="desc">Bar fill = YTD / Annual target<br>Tick = April month gate (1/12)</span>
   </div>
   <div id="vert-progs" style="padding-top: 14px;"></div>
@@ -2593,7 +2593,7 @@ function renderVerticals(d) {
   tbl.innerHTML = `
     <thead><tr>
       <th>Vertical</th>
-      <th>FY27 Target (₹ Cr)</th>
+      <th>FY2026-27 Target (₹ Cr)</th>
       <th>Ach. upto April-26 (₹ Cr)</th>
       <th>Target · 1/12 (₹ Cr)</th>
       <th>% of Target</th>
@@ -2950,7 +2950,7 @@ function renderFinancial(d) {
         </div>
       </div>`;
     if (h && h.fy26_pct_ach < 80) {
-      posbEl.innerHTML += `<div class="caveat"><strong>FY25-26 historical flag —</strong> This division achieved only ${fmt(h.fy26_pct_ach,1)}% of FY25-26 net addition target. FY27 target is ${fmtInt(t.net_add_target_FY27)} (${(t.net_add_target_FY27/h.net_add_target_fy26*100-100).toFixed(0)}% change vs FY26 target of ${fmtInt(h.net_add_target_fy26)}). Early conversation needed with SSPos.</div>`;
+      posbEl.innerHTML += `<div class="caveat"><strong>FY25-26 historical flag —</strong> This division achieved only ${fmt(h.fy26_pct_ach,1)}% of FY25-26 net addition target. FY2026-27 target is ${fmtInt(t.net_add_target_FY27)} (${(t.net_add_target_FY27/h.net_add_target_fy26*100-100).toFixed(0)}% change vs FY26 target of ${fmtInt(h.net_add_target_fy26)}). Early conversation needed with SSPos.</div>`;
     }
   } else {
     posbEl.innerHTML = '<div class="placeholder"><strong>No POSB activity</strong>This division (typically RMS) does not handle POSB operations.</div>';

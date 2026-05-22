@@ -2480,7 +2480,7 @@ function renderAggregateOnly(d, members, aggType) {
           <div class="r-big" style="color:var(--${cls});">${fmt(agg.composite_score,1)}<span class="pcsym">%</span></div>
           <div class="r-rev">
             <div>Apr revenue: <strong>\u20b9${fmt(agg.actuals.Total,2)} Cr</strong></div>
-            <div>FY27 target: <strong>\u20b9${fmt(agg.targets.Total,2)} Cr</strong></div>
+            <div>FY2026-27 target: <strong>\u20b9${fmt(agg.targets.Total,2)} Cr</strong></div>
             <div>ECR (w/pen): <strong>${fmt(agg.ecr_with_pension,2)}%</strong></div>
           </div>
         </div>`;
@@ -2503,7 +2503,7 @@ function renderOverview(d) {
   document.getElementById('ov-revenue').innerHTML = '₹' + fmt(d.actuals.Total, 2) + '<span class="unit"> Cr</span>';
   const proRataTotal = d.pro_rata.Total;
   const pctOfPro = proRataTotal > 0 ? d.actuals.Total / proRataTotal * 100 : 0;
-  document.getElementById('ov-revenue-sub').innerHTML = `vs ₹${fmt(proRataTotal,2)} Cr proportionate · ${fmt(pctOfPro,1)}% of target<br>FY27 target: ₹${fmt(d.targets.Total,2)} Cr`;
+  document.getElementById('ov-revenue-sub').innerHTML = `vs ₹${fmt(proRataTotal,2)} Cr proportionate · ${fmt(pctOfPro,1)}% of target<br>FY2026-27 target: ₹${fmt(d.targets.Total,2)} Cr`;
   
   // ECR
   document.getElementById('ov-ecr-with').innerHTML = fmt(d.ecr_with_pension, 2) + '<span class="unit">%</span>';
